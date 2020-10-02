@@ -1,7 +1,7 @@
 #include<stdio.h>
 int d_t_b(int n)
 {
-    int rem;int b=0;
+    int rem;int b=0,i=1;
     if(n==0)
     {
         b=0;
@@ -11,8 +11,9 @@ int d_t_b(int n)
         while(n>0)
         {
             rem=n%2;
-            b=b*10+rem;
+            b=b+rem*i;
             n=n/2;
+            i*=10;
         }
         printf("\n %d : is the binary \n",b);
     }
